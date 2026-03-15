@@ -1,0 +1,24 @@
+---
+const { platform, username } = Astro.props;
+---
+
+<a href={`https://www.${platform}.com/${username}`}>{platform}</a>
+
+<style>
+    a{
+        padding:0.5rem 1rem;
+        color:white;
+        background-color:#4c1d95;
+        text-decoration:none;
+        border-radius:0.25rem;
+        box-shadow: #4c1d95 0px 1px 1px;
+    }
+    a:hover{
+        color:#4c1d95;
+        background-color:paleturquoise;
+        transition:0.2s;
+        box-shadow: #4c1d95 0px 0px 0px;
+    }
+    /* 「hrefの中に twitter.com を含むリンク」を持っている footer */
+        
+</style>

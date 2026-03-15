@@ -1,0 +1,46 @@
+---
+---
+
+<div class="buttonBox">
+    <button aria-expanded="false" aria-controls="main-menu" class="testButton">
+        押せ！
+    </button>
+</div>
+
+<style>
+    .buttonBox {
+        display:flex;
+        place-items:center;
+        justify-content: center;
+        align-items: center;
+        background-color:purple;
+        height:100px;
+        
+    }
+    .testButton {
+        background-color:#0d0950;
+        border:none;
+        color:#fff;
+        font-size:1.2rem;
+        font-weight:bold;
+        border-radius:0.25rem;
+        transition:0.02s;
+    }
+    .testButton:hover {
+        background-color:paleturquoise;
+        color:#0d0950;
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    div:has(.testButton[aria-expanded="true"])  {
+        background-color:crimson;
+        color:white;
+        transition:0.2s;
+    }
+
+    div:has(.testButton[aria-expanded="true"]) .testButton  {
+        background-color:blue;
+    }
+    
+</style>
